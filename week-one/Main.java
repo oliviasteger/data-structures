@@ -10,8 +10,8 @@ class Main {
     mentors[1] = mentor2;
     course.addStudent(droid);
     course.getClassSize();
-    course.setMentor(mentor);
-    course.setMentors(mentors);
+    course.addMentor(mentor);
+    course.addMentors(mentors);
     course.getMentorSize();
     course.removeMentor(mentor1);
     course.removeStudent(droid);
