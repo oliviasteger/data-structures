@@ -13,20 +13,20 @@ public class Course {
   }
 
   public void setMentor(Mentor mentor) {
-   if (myMentors.size() != 0) {
-     while (myMentors.size() != 0) {
-       myMentors.remove(0);
-     }
-   }
-   myMentors.add(0, mentor);
+    if (myMentors.size() != 0) {
+      while (myMentors.size() != 0) {
+        myMentors.remove(0);
+      }
+    }
+    myMentors.add(0, mentor);
   }
 
   public void setMentors(Mentor[] mentors) {
     if (myMentors.size() != 0) {
-     while (myMentors.size() != 0) {
-       myMentors.remove(0);
-     }
-   }
+      while (myMentors.size() != 0) {
+        myMentors.remove(0);
+      }
+    }
     for (int i = 0; i < mentors.length; i++) {
       myMentors.add(mentors[i]);
     }
