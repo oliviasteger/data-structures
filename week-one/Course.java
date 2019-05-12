@@ -8,8 +8,8 @@ public class Course {
   public Course(String name) {
     myName = name;
   }
-  public void addStudent(Nano student) {
-    myStudents.add(student);
+  public void addStudent(Nano nano) {
+    myStudents.add(nano);
   }
 
   public void setMentor(Mentor mentor) {
