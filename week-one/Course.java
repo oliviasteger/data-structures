@@ -12,7 +12,7 @@ public class Course {
     myStudents.add(nano);
   }
 
-  public void setMentor(Mentor mentor) {
+  private void addMentor(Mentor mentor) {
     if (myMentors.size() != 0) {
       while (myMentors.size() != 0) {
         myMentors.remove(0);
@@ -21,7 +21,7 @@ public class Course {
     myMentors.add(0, mentor);
   }
 
-  public void setMentors(Mentor[] mentors) {
+  private void addMentors(Mentor[] mentors) {
     if (myMentors.size() != 0) {
       while (myMentors.size() != 0) {
         myMentors.remove(0);
