@@ -67,23 +67,23 @@ public class Course {
 
   public ArrayList<Nano> rosterSortedAlphabetically() {
     if (myStudents.size()!=0) {
-    ArrayList<Nano> newRoster = new ArrayList<Nano>();
-    Nano student = myStudents.get(0);
-    int index = 0;
-    while (myStudents.size() > 0) {
-      for (int x = 0; x < myStudents.size(); x++) {
-        if (myStudents.get(x).compareTo(student) == 1) {
-          student = myStudents.get(x);
-          index = x;
+      ArrayList<Nano> newRoster = new ArrayList<Nano>();
+      Nano student = myStudents.get(0);
+      int index = 0;
+      while (myStudents.size() > 0) {
+        for (int x = 0; x < myStudents.size(); x++) {
+          if (myStudents.get(x).compareTo(student) == 1) {
+            student = myStudents.get(x);
+            index = x;
+          }
         }
+        myStudents.remove(index);
+        newRoster.add(newRoster.size()-1, student);
       }
-      myStudents.remove(index);
-      newRoster.add(newRoster.size()-1, student);
-    }
-    for (int i = 0; i < newRoster.size(); i++) {
-      myStudents.set(i, newRoster.get(i));
-    }
-    return myStudents;
+      for (int i = 0; i < newRoster.size(); i++) {
+        myStudents.set(i, newRoster.get(i));
+      }
+      return myStudents;
     } else {
       throw new NullPointerException("No students in this class!");
     }
