@@ -32,7 +32,6 @@ public class DoubleLinkedList {
       return;
     }
 
-
     DoubleNode toBeDeleted = this.head;
     while (toBeDeleted != null) {
       if (toBeDeleted.getData() == z) {
