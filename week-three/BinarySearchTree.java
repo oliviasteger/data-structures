@@ -121,4 +121,24 @@ public class BinarySearchTree {
   
     drawTreeHelper(node.left, space, 2);  
   }
+  
+  public void breadthFirstTraversal() {
+    int height = height(this.root);
+    for (int i = 1; i <= height; i++) {
+      breadthFirstTraversalHelper(root, i);
+    }
+  }
+
+  public void breadthFirstTraversalHelper(BinarySearchNode node, int height) {
+    if (node == null) {
+      return;
+    }
+    
+    if (height == 1) {
+      System.out.print(node.data + " ");
+    } else if (height > 1) {
+      breadthFirstTraversalHelper(node.left, height-1);
+      breadthFirstTraversalHelper(node.right, height-1);
+    }
+  }
 }
